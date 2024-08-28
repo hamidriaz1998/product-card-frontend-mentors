@@ -3,6 +3,7 @@
 
 :root {
     --dark-cyan: hsl(158, 36%, 37%);
+    --very-dark-cyan: hsl(159, 29%, 20%);
     --cream: hsl(30, 38%, 92%);
     --very-dark-blue: hsl(212, 21%, 14%);
     --dark-grayish-blue: hsl(228, 12%, 48%);
@@ -73,10 +74,10 @@ main {
     color: var(--dark-cyan);
 }
 
-button{
+button {
     background-color: var(--dark-cyan);
     color: var(--white);
-    border:none;
+    border: none;
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -85,4 +86,41 @@ button{
     padding: 15px;
     width: 98%;
     font-weight: 700;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: var(--very-dark-cyan);
+}
+
+@media (min-width: 320px) {
+    button {
+        width: 95%;
+    }
+}
+@media (min-width: 768px) {
+    .card {
+        max-width: 700px;
+        display: flex;
+        height: 450px;
+        width: 625px;
+    }
+    .card > img {
+        border-radius: 10px 0 0 10px;
+        height: 100%;
+        content: url("images/image-product-desktop.jpg");
+    }
+    .product-name,
+    .price > h2 {
+        font-size: 1.93rem;
+    }
+    .card-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.7rem;
+    }
+    button {
+        width: 100%;
+    }
 }
