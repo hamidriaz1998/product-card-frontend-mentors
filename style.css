@@ -75,6 +75,7 @@ main {
 }
 
 button {
+    transition: background-color 0.3s ease-in-out;
     background-color: var(--dark-cyan);
     color: var(--white);
     border: none;
@@ -88,7 +89,7 @@ button {
     font-weight: 700;
 }
 
-button:hover{
+button:hover {
     cursor: pointer;
     background-color: var(--very-dark-cyan);
 }
